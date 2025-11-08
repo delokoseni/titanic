@@ -1,8 +1,8 @@
 import pandas as pd
-from sklearn.preprocessing import *
-from sklearn.neighbors import *
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import *
+from sklearn.preprocessing import StandardScaler  # type: ignore
+from sklearn.neighbors import KNeighborsClassifier  # type: ignore
+from sklearn.model_selection import train_test_split  # type: ignore
+from sklearn.metrics import accuracy_score, confusion_matrix  # type: ignore
 
 df = pd.read_csv('titanic.csv')
 df.drop(['PassengerId', 'Name', 'Ticket', 'Cabin'], axis=1, inplace=True)
